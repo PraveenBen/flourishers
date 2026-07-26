@@ -1,26 +1,235 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --transition-theme: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  transition: var(--transition-theme);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-family: var(--font-body), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display), serif;
+}
+
+/* ---------- EMERALD (default, rich/luxury) ---------- */
+[data-theme='emerald'] {
+  --bg: #070908;
+  --bg-gradient: radial-gradient(circle at 50% 0%, #10b98122, transparent 55%);
+  --surface: #121a16;
+  --surface-hover: #182119;
+  --text: #f3f4f2;
+  --text-muted: #9fada6;
+  --accent: #10b981;
+  --accent-text: #04150d;
+  --border-color: #22332a;
+  --border-width: 1px;
+  --radius: 14px;
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(16, 185, 129, 0.08);
+  --blur: none;
+}
+
+/* ---------- GLASSMORPHISM ---------- */
+[data-theme='glass'] {
+  --bg: #1a1d24;
+  --bg-gradient: radial-gradient(circle at 20% 20%, #ffffff26, transparent 40%),
+    radial-gradient(circle at 80% 0%, #cbd5e126, transparent 40%),
+    radial-gradient(circle at 50% 100%, #94a3b826, transparent 40%);
+  --surface: rgba(255, 255, 255, 0.10);
+  --surface-hover: rgba(255, 255, 255, 0.18);
+  --text: #f1f5f9;
+  --text-muted: #cbd5e1;
+  --accent: #cbd5e1;
+  --accent-text: #1e293b;
+  --border-color: rgba(255, 255, 255, 0.4);
+  --border-width: 1px;
+  --radius: 20px;
+  --shadow: 0 8px 32px rgba(148, 163, 184, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 0 40px rgba(255, 255, 255, 0.03);
+  --blur: blur(24px) saturate(180%);
+}
+
+[data-theme='glass'] .surface {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04) 60%);
+}
+
+[data-theme='glass'] .surface:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.06) 60%);
+}
+
+[data-theme='glass'] .surface::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 30%);
+  pointer-events: none;
+}
+
+/* ---------- NEOBRUTALISM ---------- */
+[data-theme='neo'] {
+  --bg: #fff8e7;
+  --bg-gradient: none;
+  --surface: #ffffff;
+  --surface-hover: #fffdf7;
+  --text: #0a0a0a;
+  --text-muted: #3a3a3a;
+  --accent: #00c853;
+  --accent-text: #0a0a0a;
+  --border-color: #0a0a0a;
+  --border-width: 3px;
+  --radius: 4px;
+  --shadow: 6px 6px 0 #0a0a0a;
+  --blur: none;
+}
+
+/* ---------- NEUMORPHISM ---------- */
+[data-theme='neumorph'] {
+  --bg: #e0e5ec;
+  --bg-gradient: none;
+  --surface: #e0e5ec;
+  --surface-hover: #e5eaf0;
+  --text: #3d4451;
+  --text-muted: #6b7280;
+  --accent: #10b981;
+  --accent-text: #ffffff;
+  --border-color: transparent;
+  --border-width: 0px;
+  --radius: 20px;
+  --shadow: 8px 8px 16px #b8bcc2, -8px -8px 16px #ffffff;
+  --blur: none;
+}
+
+/* ---------- JAPANDI / MINIMALISM ---------- */
+[data-theme='japandi'] {
+  --bg: #f5f1ea;
+  --bg-gradient: none;
+  --surface: #fbf9f6;
+  --surface-hover: #f2ede4;
+  --text: #3a3530;
+  --text-muted: #8a8175;
+  --accent: #6b8f71;
+  --accent-text: #fbf9f6;
+  --border-color: #ddd5c7;
+  --border-width: 1px;
+  --radius: 6px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --blur: none;
+}
+
+body {
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+}
+
+/* ---------- shared component classes ---------- */
+.surface {
+  background: var(--surface);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+}
+
+.surface:hover {
+  background: var(--surface-hover);
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--accent-text);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-weight: 600;
+  padding: 0.65rem 1.4rem;
+  transition: var(--transition-theme), transform 0.15s ease;
+}
+
+.btn-accent:active {
+  transform: translateY(2px);
+}
+
+[data-theme='neo'] .btn-accent:active {
+  box-shadow: 2px 2px 0 #0a0a0a;
+  transform: translate(4px, 4px);
+}
+
+[data-theme='glass'] .btn-accent {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(203, 213, 225, 0.35), rgba(203, 213, 225, 0.12) 60%);
+  color: var(--text);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+}
+
+[data-theme='glass'] .btn-accent:hover {
+  background: linear-gradient(135deg, rgba(203, 213, 225, 0.45), rgba(203, 213, 225, 0.18) 60%);
+}
+
+[data-theme='glass'] .btn-accent::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 35%);
+  pointer-events: none;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.input-field {
+  background: var(--surface);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--radius);
+  color: var(--text);
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+[data-theme='neumorph'] .input-field {
+  border: none;
+  box-shadow: inset 4px 4px 8px #b8bcc2, inset -4px -4px 8px #ffffff;
+}
+
+[data-theme='neumorph'] .input-field:focus {
+  box-shadow: inset 5px 5px 10px #b8bcc2, inset -5px -5px 10px #ffffff;
+}
+
+[data-theme='neumorph'] footer {
+  box-shadow: inset 0 8px 12px -8px #b8bcc2;
+}
+
+.brand-display {
+  font-family: var(--font-display), serif;
+  letter-spacing: 0.04em;
+  color: var(--text);
+}
+
+[data-theme='emerald'] .brand-display {
+  background: linear-gradient(135deg, #d9b579, #10b981 55%, #d9b579);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
