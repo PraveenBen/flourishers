@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Card from '@/components/ui/card';
 
 export default function Home() {
@@ -7,12 +8,28 @@ export default function Home() {
       <section style={{ textAlign: 'center', marginBottom: '4rem', marginTop: '2rem' }}>
         <h1
           className="brand-display"
-          style={{ fontSize: 'clamp(3.5rem, 9vw, 6rem)', fontWeight: 800, marginBottom: '0.75rem', lineHeight: 1.05 }}
+          style={{
+            marginBottom: '1.5rem',
+            display: 'flex',
+            justifyContent: 'center',
+          }}
         >
-          flourishers
+          <Image
+            src="/logo-full.png"
+            alt="flourishers"
+            width={280}
+            height={140}
+            style={{
+              height: 'auto',
+              maxHeight: '140px',
+              width: 'auto',
+              objectFit: 'contain',
+            }}
+            priority
+          />
         </h1>
         <p style={{ fontSize: '1.35rem', fontWeight: 600, marginBottom: '1rem' }}>
-          Branding & growth for businesses that mean it
+          Voice your Digital Presence.
         </p>
         <p className="text-muted" style={{ maxWidth: '540px', margin: '0 auto 1.5rem' }}>
           SEO, GEO, and AEO to get you found, cited, and answered — plus the hands-on social

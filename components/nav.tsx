@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import ThemeSwitcher from '@/components/theme-switcher';
@@ -92,8 +93,9 @@ export default function Nav() {
           <Link
             href="/"
             className="brand-display"
-            style={{ fontSize: '1.1rem', fontWeight: 700, textDecoration: 'none' }}
+            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '1.1rem', fontWeight: 700, textDecoration: 'none' }}
           >
+            <Image src="/logo-mark.png" alt="" width={32} height={32} style={{ height: '32px', width: 'auto' }} priority />
             flourishers
           </Link>
 
