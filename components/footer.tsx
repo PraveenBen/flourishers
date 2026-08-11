@@ -53,7 +53,7 @@ export default function Footer() {
               className="brand-display"
               style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '1.25rem', fontWeight: 700, marginBottom: '0.5rem' }}
             >
-              <Image src="/logo-mark.png" alt="" width={28} height={28} style={{ height: '28px', width: 'auto' }} />
+              <Image src="/flourishers-mark.svg" alt="" width={28} height={28} style={{ height: '28px', width: 'auto' }} />
               flourishers
             </p>
             <p className="text-muted">One operator. Every channel. One message.</p>

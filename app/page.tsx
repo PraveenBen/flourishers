@@ -11,22 +11,13 @@ export default function Home() {
           style={{
             marginBottom: '1.5rem',
             display: 'flex',
-            justifyContent: 'center',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '0.75rem',
           }}
         >
-          <Image
-            src="/logo-full.png"
-            alt="flourishers"
-            width={280}
-            height={140}
-            style={{
-              height: 'auto',
-              maxHeight: '140px',
-              width: 'auto',
-              objectFit: 'contain',
-            }}
-            priority
-          />
+          <Image src="/flourishers-mark.svg" alt="" width={96} height={96} style={{ height: '96px', width: '96px' }} priority />
+          <span style={{ fontSize: 'clamp(2.25rem, 5vw, 3rem)', fontWeight: 700 }}>Flourishers</span>
         </h1>
         <p style={{ fontSize: '1.35rem', fontWeight: 600, marginBottom: '1rem' }}>
           Voice your Digital Presence.
