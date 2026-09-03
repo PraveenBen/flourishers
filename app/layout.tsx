@@ -18,7 +18,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Flourishers',
+  title: 'flourishers',
   description: 'SEO, GEO, and AEO — plus the hands-on social media management and brand identity work that makes sure your site and your social handles say the same great thing.',
   icons: {
     icon: '/flourishers-favicon.svg',
