@@ -18,11 +18,6 @@ const mission =
 
 const differentiators = [
   {
-    title: 'One person, not a rotating account team',
-    description:
-      'The founder personally logs into your accounts, writes your posts, and manages your backend scheduling system. No handoffs to a junior freelancer three weeks in.',
-  },
-  {
     title: 'One voice across every surface',
     description:
       'Your website copy, your Instagram captions, and your Facebook bio are written by the same hand, so a customer gets the same message whether they find you on Google or in their feed.',

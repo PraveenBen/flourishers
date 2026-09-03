@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-labelledby="t d">
+<title id="t">Flourishers</title>
+<desc id="d">Growth-rings mark knocked out in white on an emerald field, for social avatars and dark backgrounds.</desc>
+<rect width="200" height="200" fill="#0F6E56"/>
+<g transform="translate(100,100) scale(0.78) translate(-100,-100)">
+<g fill="none" stroke="#FFFFFF" stroke-linecap="butt">
+<path stroke-width="5.5" d="M106.49 22.27 A78 78 0 1 1 93.51 22.27"/>
+<path stroke-width="4" d="M106.49 67.32 A48.21 48.21 0 1 1 93.51 67.32"/>
+<path stroke-width="2.9" d="M106.49 95.34 A29.79 29.79 0 1 1 93.51 95.34"/>
+<path stroke-width="2.1" d="M106.49 112.95 A18.41 18.41 0 1 1 93.51 112.95"/>
+</g>
+<circle cx="100" cy="133.74" r="10.5" fill="#FFFFFF"/>
+</g>
+</svg>

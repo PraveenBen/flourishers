@@ -20,6 +20,10 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Flourishers',
   description: 'SEO, GEO, and AEO — plus the hands-on social media management and brand identity work that makes sure your site and your social handles say the same great thing.',
+  icons: {
+    icon: '/flourishers-favicon.svg',
+    apple: '/flourishers-mark-reversed.svg',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import ThemeSwitcher from '@/components/theme-switcher';
@@ -60,6 +61,7 @@ export default function Nav() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            gap: '0.4rem',
             opacity: collapsed ? 1 : 0,
             pointerEvents: 'none',
             transition: 'opacity 0.2s ease',
@@ -70,6 +72,7 @@ export default function Nav() {
             color: 'var(--accent-text)',
           }}
         >
+          <Image src="/flourishers-mark-mono.svg" alt="" width={14} height={14} style={{ height: '14px', width: '14px' }} />
           {currentLabel}
         </div>
 
@@ -92,8 +95,9 @@ export default function Nav() {
           <Link
             href="/"
             className="brand-display"
-            style={{ fontSize: '1.1rem', fontWeight: 700, textDecoration: 'none' }}
+            style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '1.1rem', fontWeight: 700, textDecoration: 'none' }}
           >
+            <Image src="/flourishers-mark.svg" alt="" width={32} height={32} style={{ height: '32px', width: 'auto' }} priority />
             flourishers
           </Link>
 

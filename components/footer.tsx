@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const linkColumns = [
@@ -48,7 +49,11 @@ export default function Footer() {
           }}
         >
           <div>
-            <p className="brand-display" style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '0.5rem' }}>
+            <p
+              className="brand-display"
+              style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '1.25rem', fontWeight: 700, marginBottom: '0.5rem' }}
+            >
+              <Image src="/flourishers-mark.svg" alt="" width={28} height={28} style={{ height: '28px', width: 'auto' }} />
               flourishers
             </p>
             <p className="text-muted">One operator. Every channel. One message.</p>

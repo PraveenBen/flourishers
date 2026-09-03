@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" width="320" height="260" role="img" aria-labelledby="t d">
+<title id="t">Flourishers mark — construction</title>
+<desc id="d">Guide circles with golden-ratio radii and drifting centres, the vertical stem channel, and gap measurements labelled in powers of phi.</desc>
+<g font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#888780">
+<g fill="none" stroke="#B4B2A9" stroke-width="0.6" stroke-dasharray="3 3">
+<circle cx="160" cy="100" r="78"/>
+<circle cx="160" cy="115.09" r="48.21"/>
+<circle cx="160" cy="124.42" r="29.79"/>
+<circle cx="160" cy="130.18" r="18.41"/>
+</g>
+<g fill="none" stroke="#B4B2A9" stroke-width="0.6" stroke-dasharray="1.5 4">
+<line x1="160" y1="8" x2="160" y2="192"/>
+<line x1="153.51" y1="8" x2="153.51" y2="150"/>
+<line x1="166.49" y1="8" x2="166.49" y2="150"/>
+</g>
+<g fill="none" stroke="#0F6E56" stroke-linecap="butt">
+<path stroke-width="5.5" d="M166.49 22.27 A78 78 0 1 1 153.51 22.27"/>
+<path stroke-width="4" d="M166.49 67.32 A48.21 48.21 0 1 1 153.51 67.32"/>
+<path stroke-width="2.9" d="M166.49 95.34 A29.79 29.79 0 1 1 153.51 95.34"/>
+<path stroke-width="2.1" d="M166.49 112.95 A18.41 18.41 0 1 1 153.51 112.95"/>
+</g>
+<circle cx="160" cy="133.74" r="10.5" fill="#BA7517"/>
+<g fill="#888780">
+<circle cx="160" cy="100" r="1.4"/>
+<circle cx="160" cy="115.09" r="1.4"/>
+<circle cx="160" cy="124.42" r="1.4"/>
+<circle cx="160" cy="130.18" r="1.4"/>
+</g>
+<g stroke="#888780" stroke-width="0.7">
+<line x1="52" y1="22" x2="64" y2="22"/>
+<line x1="52" y1="66.88" x2="64" y2="66.88"/>
+<line x1="52" y1="94.62" x2="64" y2="94.62"/>
+<line x1="52" y1="111.77" x2="64" y2="111.77"/>
+<line x1="58" y1="22" x2="58" y2="111.77"/>
+</g>
+<text x="46" y="47" text-anchor="end">44.88</text>
+<text x="46" y="84" text-anchor="end">27.74</text>
+<text x="46" y="106" text-anchor="end">17.14</text>
+<text x="16" y="222">radii  78 : 48.21 : 29.79 : 18.41   each step 1 / 1.618</text>
+<text x="16" y="236">centre drift  15.09 : 9.33 : 5.76   each step 1 / 1.618</text>
+<text x="16" y="250">stem channel  12.98 wide   seed radius 10.5   channel = seed / 1.618</text>
+</g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-labelledby="t d">
+<title id="t">Flourishers</title>
+<desc id="d">Simplified two-ring version of the growth-rings mark, for favicon and app-icon sizes from 16 to 32 pixels.</desc>
+<g fill="none" stroke="#0F6E56" stroke-linecap="butt">
+<path stroke-width="7" d="M111 22.78 A78 78 0 1 1 89 22.78"/>
+<path stroke-width="5" d="M111 68.15 A48.21 48.21 0 1 1 89 68.15"/>
+</g>
+<circle cx="100" cy="132" r="14" fill="#BA7517"/>
+</svg>
