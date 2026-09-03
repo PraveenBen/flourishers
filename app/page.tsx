@@ -17,7 +17,7 @@ export default function Home() {
           }}
         >
           <Image src="/flourishers-mark.svg" alt="" width={96} height={96} style={{ height: '96px', width: '96px' }} priority />
-          <span style={{ fontSize: 'clamp(2.25rem, 5vw, 3rem)', fontWeight: 700 }}>Flourishers</span>
+          <span style={{ fontSize: 'clamp(2.25rem, 5vw, 3rem)', fontWeight: 700 }}>flourishers</span>
         </h1>
         <p style={{ fontSize: '1.35rem', fontWeight: 600, marginBottom: '1rem' }}>
           Voice your Digital Presence.
